@@ -22,10 +22,9 @@ A course exercise (*Java Fundamentals: HttpClient*) demonstrating the JDK
 4. **Validity = final 2xx after redirects.** Redirects are followed; the
    report shows the terminal status. Rationale: matches how users
    experience links.
-5. **Gradle wrapper + JDK 25 toolchain.** Checked-in `gradlew`; compilation
-   targets Java 25 while CI launches Gradle on JDK 17. Rationale: fleet
-   SDK standardisation; toolchain auto-resolution keeps contributors free
-   of manual JDK installs.
+5. **Gradle wrapper + JDK 25 toolchain.** Checked-in `gradlew`; Gradle and
+   the toolchain both run on Java 25. Rationale: fleet SDK standardisation;
+   toolchain auto-resolution keeps contributors free of manual JDK installs.
 6. **Tests use local HttpServer fixtures.** 200, 404, redirect, refused
    connection — no external network. Rationale: hermetic CI.
 

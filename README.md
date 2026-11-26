@@ -17,7 +17,7 @@ followed, so a 301/302 that ends in a 200 is valid.
 
 ## Requirements
 
-- JDK 17 (the code uses `var` and the Flow-free `HttpClient`; Java 11+ works)
+- JDK 25
 - No Gradle install needed — the wrapper is checked in
 
 ## Run it
