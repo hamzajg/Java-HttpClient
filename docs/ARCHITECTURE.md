@@ -25,8 +25,8 @@ Java-HttpClient/   (Gradle, single module)
 
 ## Design
 
-- **One class, synchronous.** `java.net.http.HttpClient` (Java 11+) with
-  `send()` — deliberately not `sendAsync`; scope is a teaching example.
+- **One class, synchronous.** `java.net.http.HttpClient` with `send()` —
+  deliberately not `sendAsync`; scope is a teaching example.
 - **Injectable client.** Package-private ctor accepts an `HttpClient` so
   tests control timeouts/redirect policy.
 - **Network-free tests.** `com.sun.net.httpserver.HttpServer` serves

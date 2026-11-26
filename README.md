@@ -1,7 +1,7 @@
 # Java-HttpClient
 
-A synchronous link checker built on the JDK's `java.net.http.HttpClient`
-(Java 11+), from the *Java Fundamentals: HttpClient* course.
+A synchronous link checker built on the JDK's `java.net.http.HttpClient`,
+from the *Java Fundamentals: HttpClient* course.
 
 Given one or more URLs it makes a `GET` request for each and prints a one-line
 report:
