@@ -4,8 +4,8 @@ Guidance for AI agents (and humans) working in this repository.
 
 ## Project
 
-A synchronous link checker built on the JDK's `java.net.http.HttpClient`
-(Java 11+), from the *Java Fundamentals: HttpClient* course. Given URLs it
+A synchronous link checker built on the JDK's `java.net.http.HttpClient`,
+from the *Java Fundamentals: HttpClient* course. Given URLs it
 makes `GET` requests and prints a one-line report per link; a link is valid
 on a 2xx status, redirects are followed.
 Stack: Java (Gradle wrapper), JUnit tests, `com.sun.net.httpserver` for
