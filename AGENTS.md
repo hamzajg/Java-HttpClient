@@ -17,13 +17,14 @@ Verified 2026-11-13 against CI (`.github/workflows/ci.yml`) and README.
 
 | Task | Command |
 |---|---|
-| Build + test | `sh gradlew build --no-daemon` (CI: JDK 17 launcher) |
+| Build + test | `sh gradlew build --no-daemon` (CI: JDK 25) |
 | Tests only | `sh gradlew test` |
 | Run demo | `sh gradlew run --args="https://example.com https://example.com/missing"` |
 | Test report | `build/reports/tests/test/index.html` |
 
-Requires: JDK to run Gradle (CI uses 17). **Compilation toolchain is JDK 25**
-(`build.gradle` → `java.toolchain.languageVersion = 25`), auto-resolved.
+Requires: JDK 25 to run Gradle and to compile. **Compilation toolchain is
+JDK 25** (`build.gradle` → `java.toolchain.languageVersion = 25`),
+auto-resolved.
 
 ## Architecture
 
@@ -51,8 +52,7 @@ seam.
 ## Landmines
 
 - **Default branch is `master`, not `main`.**
-- JDK 17 launcher / JDK 25 toolchain split (same as TDDLetsPlay) — don't
-  "fix" either number.
+- The wrapper is 9.9.1 because older Gradle releases cannot run on JDK 25.
 - Redirect handling is `HttpClient.Redirect.NORMAL`-style follow — a 301→200
   counts valid; don't change semantics without updating tests.
 - `build/` output exists locally — gitignored presumably; don't commit.
